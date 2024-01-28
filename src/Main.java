@@ -19,7 +19,7 @@ public class Main {
             }
         }
 
-        System.out.println("=== Матрица ===");
+        System.out.println("=== Исходная матрица ===");
         for (int[] aMatrix : matrix) {
             for (int anAMatrix : aMatrix) {
                 System.out.print(anAMatrix + "\t");
@@ -27,11 +27,22 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("Сумма элементов матрицы - " + sumOfMatrixElements(matrix));
+        System.out.println("Сумма элементов матрицы: " + sumMatrixElements(matrix));
+
+        int[][] transMatrix = transposeMatrix(matrix);
+
+        System.out.println("=== Транспонированая матрица ===");
+        for (int[] tMatr : transMatrix) {
+            for (int tranMatrix : tMatr) {
+                System.out.print(tranMatrix + "\t");
+            }
+            System.out.println();
+        }
+
 
     }
-    // метод суммирования элементов матрицы
-    public static int sumOfMatrixElements(int[][] matrix) {
+
+    public static int sumMatrixElements(int[][] matrix) {
         int sum = 0;
         for (int[] row : matrix){
             for (int element : row) {
@@ -39,5 +50,14 @@ public class Main {
             }
         }
         return sum;
+    }
+    public static int [][] transposeMatrix (int[][] matrix) {
+        int[][] result = new int[matrix[0].length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                result[j][i] = matrix[i][j];
+            }
+        }
+        return result;
     }
 }
