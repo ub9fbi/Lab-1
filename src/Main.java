@@ -29,17 +29,23 @@ public class Main {
 
         System.out.println("Сумма элементов матрицы: " + sumMatrixElements(matrix));
 
-        int[][] transMatrix = transposeMatrix(matrix);
-
         System.out.println("=== Транспонированая матрица ===");
+        int[][] transposedMatrix = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                transposedMatrix[i][j] = matrix[j][i];
+                System.out.print(transposedMatrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        /*int[][] transMatrix = transposeMatrix(matrix);
         for (int[] tMatr : transMatrix) {
             for (int tranMatrix : tMatr) {
                 System.out.print(tranMatrix + "\t");
             }
             System.out.println();
-        }
-
-
+        }*/
     }
 
     public static int sumMatrixElements(int[][] matrix) {
