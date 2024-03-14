@@ -38,14 +38,6 @@ public class Main {
             }
             System.out.println();
         }
-
-        /*int[][] transMatrix = transposeMatrix(matrix);
-        for (int[] tMatr : transMatrix) {
-            for (int tranMatrix : tMatr) {
-                System.out.print(tranMatrix + "\t");
-            }
-            System.out.println();
-        }*/
     }
 
     public static int sumMatrixElements(int[][] matrix) {
@@ -56,14 +48,5 @@ public class Main {
             }
         }
         return sum;
-    }
-    public static int [][] transposeMatrix (int[][] matrix) {
-        int[][] result = new int[matrix[0].length][matrix.length];
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                result[j][i] = matrix[i][j];
-            }
-        }
-        return result;
     }
 }
