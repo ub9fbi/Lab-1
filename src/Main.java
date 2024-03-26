@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,23 +12,23 @@ public class Main {
 
         Matrix matrix = new Matrix();
         matrix.inputMatrix(n,m);
-        matrix.transMatrix();
-        System.out.println("Сумма элементов матрицы");
+
     }
 }
 
 class Matrix {
 
     public int n,m;
-
+    int matrix [][]  = new int[n][m];
     public Matrix() {
 
     }
-
     // ввод элементов матрицы
+
+
     public void inputMatrix(int n,int m){
         Scanner scanner = new Scanner(System.in);
-        int matrix [][]  = new int[n][m];
+
         System.out.println("Введите элементы матрицы");
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -40,7 +38,7 @@ class Matrix {
         }
     }
     // Транспонированная матрица
-    public void transMatrix(int matrix[][]){
+    public void transMatrix(int matrix [][]){
         System.out.println("=== Транспонированая матрица ===");
         int transponMatrix [][]  = new int[m][n];
         for (int i = 0; i < m; i++) {
@@ -50,16 +48,16 @@ class Matrix {
             }
             System.out.println();
         }
+
     }
     // суммирование матрицы
-    public int sumMatrixElements(int matrix[][]) {
+    public void sumMatrixElements(int matrix [][]) {
         int sum = 0;
         for (int[] row : matrix){
             for (int element : row) {
                 sum += element;
             }
         }
-        return sum;
     }
 }
 
