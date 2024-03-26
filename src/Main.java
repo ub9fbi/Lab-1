@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("Введите элементы матрицы");
 
-        int[][] matrix = new int[n][m];
+        int matrix [][]  = new int[n][m];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("=== Исходная матрица ===");
         for (int[] aMatrix : matrix) {
             for (int anAMatrix : aMatrix) {
-                System.out.print(anAMatrix + "\t");
+                System.out.print(anAMatrix + " ");
             }
             System.out.println();
         }
@@ -30,11 +30,11 @@ public class Main {
         System.out.println("Сумма элементов матрицы: " + sumMatrixElements(matrix));
 
         System.out.println("=== Транспонированая матрица ===");
-        int[][] transposedMatrix = new int[m][n];
+        int transponMatrix [][]  = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                transposedMatrix[i][j] = matrix[j][i];
-                System.out.print(transposedMatrix[i][j] + "\t");
+                transponMatrix[i][j] = matrix[j][i];
+                System.out.print(transponMatrix[i][j] + " ");
             }
             System.out.println();
         }
