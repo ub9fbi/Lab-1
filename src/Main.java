@@ -3,13 +3,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите количество строк матрицы (n)");
+        System.out.println("Введите количество строк и столбцов матрицы (через пробел)");
         int n = scanner.nextInt();
-
-        System.out.println("Введите количество столбцов матрицы (m)");
         int m = scanner.nextInt();
 
         Matrix matrix = new Matrix(n, m);
+
         matrix.inputMatrix();
         matrix.transposeMatrix();
         matrix.printTransposedMatrix();
@@ -34,7 +33,6 @@ class Matrix {
         System.out.println("Введите элементы матрицы");
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print("Строка матрицы " + i + " номер элемента: " + j + " : ");
                 matrix[i][j] = scanner.nextInt();
             }
         }
